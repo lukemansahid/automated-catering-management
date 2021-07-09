@@ -11,7 +11,7 @@
 		<!-- Navigation starts -->
       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">  
 	    <ul class="nav navbar-nav">
-            
+
           <li class="dropdown dropdown-big">
             <a href="#"><span class = "label label-info"><i class="fa fa-facebook"></i></span> Like us on Facebook</a>            
           </li>
