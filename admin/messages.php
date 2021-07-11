@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:index.php');
+header('Location:signup.php');
 endif;
 ?>
 <!DOCTYPE html>

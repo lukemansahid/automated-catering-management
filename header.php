@@ -10,7 +10,13 @@
   <meta name="keywords" content="">
   <meta name="author" content="">
 
+    <link href="css/style.css" rel="stylesheet">
+    <!---Other StyleSheet-->
+    <link href="css/custom.css" rel="stylesheet">
 
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Widgets stylesheet -->
+    <link href="css/widgets.css" rel="stylesheet">
   <!-- Stylesheets -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Font awesome icon -->
@@ -36,13 +42,6 @@
   <!-- Bootstrap toggle -->
   <link rel="stylesheet" href="css/jquery.onoff.css">
   <!-- Main stylesheet -->
-  <link href="css/style.css" rel="stylesheet">
-  <!---Other StyleSheet-->
-  <link href="css/custom.css" rel="stylesheet">
-  
-  <link href="css/style.css" rel="stylesheet">
-  <!-- Widgets stylesheet -->
-  <link href="css/widgets.css" rel="stylesheet">   
   <link href="css/select2.min.css" rel="stylesheet">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

@@ -343,21 +343,24 @@ CREATE TABLE IF NOT EXISTS `team_member` (
 -- Table structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `full_name` varchar(50) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
   `username` varchar(15) NOT NULL,
-  `password` varchar(15) NOT NULL,
+  `password` varchar(300) NOT NULL,
   `status` varchar(10) NOT NULL,
+  `user_role`  varchar(10) NOT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `user` (`user_id`, `full_name`, `username`, `password`, `status`) VALUES
-(1, 'Lee Pipez', 'admin', '123', 'active');
+INSERT INTO `users` (`user_id`, `first_name`, `last_name`,`username`, `password`, `status`,`user_role`) VALUES
+(1, 'Christel', 'Cole', 'admin', '2021', 'active','admin');
+(2, 'Lukeman', 'Kamara', 'lukish', '2022', 'active','admin');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

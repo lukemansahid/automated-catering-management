@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:index.php');
+header('Location:signup.php');
 endif;
 ?>
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ endif;
     
 
     </div>
-  </div>
+</div>
 
 
 
@@ -100,27 +100,35 @@ endif;
                         <th>Full Name</th>
                         <th>Username</th>
                         <th>Status</th>
-                        <th>Action</th>
+                        <th>Role</th>
+                          <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
 <?php
 include('../includes/dbcon.php');
 
-    $query=mysqli_query($con,"select * from user order by full_name")or die(mysqli_error());
-      while ($row=mysqli_fetch_array($query)){
+    $sql = "select * from users order by first_name";
+    $result=mysqli_query($con,$sql)or die(mysqli_error());
+    $rowCount = mysqli_num_rows($result);
+
+    if ($rowCount > 0){
+      while ($row=mysqli_fetch_array($result)){
         $id=$row['user_id'];
-        $name=$row['full_name'];
+        $firstname=$row['first_name'];
+        $lastname=$row['last_name'];
         $username=$row['username'];
         $status=$row['status'];
         $password=$row['password'];
+        $userRole=$row['user_role'];
 
         if ($status=="active") $flag="success";else $flag="danger";
 ?>                      
                       <tr>
-                        <td><?php echo $name;?></td>
+                        <td><?php echo $firstname ." ".$lastname;?></td>
                         <td><?php echo $username;?></td>
                         <td><span class="label label-<?php echo $flag;?>"><?php echo $status;?></span></td>
+                          <td><?php echo $userRole ;?></td>
                         <td>
                             <div class="col-md-2">
                               <a href="#myModal" class="btn btn-info" data-target="#update<?php echo $id;?>" data-toggle="modal">
@@ -143,12 +151,20 @@ include('../includes/dbcon.php');
               <form class="form-horizontal" method="post" action="user_update.php">
                   <!-- Title -->
                   <div class="form-group">
-                      <label class="control-label col-lg-2" for="title">Full Name</label>
+                      <label class="control-label col-lg-2" for="firstname">First Name</label>
                       <div class="col-lg-10"> 
                         <input type="hidden" class="form-control" name="id" value="<?php echo $id;?>">
-                        <input type="text" class="form-control" name="name" id="title" placeholder="Write Full Name of User" value="<?php echo $name;?>">
+                        <input type="text" class="form-control" name="fistname" id="title" placeholder="Write First Name of User" value="<?php echo $firstname;?>">
                       </div>
-                  </div> 
+                  </div>
+
+                  <!-- Title -->
+                  <div class="form-group">
+                      <label class="control-label col-lg-2" for="lastname">Last Name</label>
+                      <div class="col-lg-10">
+                          <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Write Full Name of User" value="<?php echo $lastname;?>">
+                      </div>
+                  </div>
                   <!-- Title -->
                   <div class="form-group">
                       <label class="control-label col-lg-2" for="username">Username</label>
@@ -173,8 +189,22 @@ include('../includes/dbcon.php');
                                 <option>inactive</option>
                         </select>
                       </div>
-                  </div> 
-                                                    
+                  </div>
+                  <!-- Title -->
+                  <div class="form-group">
+                      <label class="control-label col-lg-2" for="password">Role</label>
+                      <div class="col-lg-10">
+                          <select class="form-control" id="exampleSelect1" name="userRole">
+                              <option><?php echo $userRole;?></option>
+                              <option>Staff</option>
+                              <option>Admin</option>
+                              <option>User</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <br />
+
                   <!-- Buttons -->
                   <div class="form-group">
                       <!-- Buttons -->
@@ -191,16 +221,8 @@ include('../includes/dbcon.php');
     </div><!--modal dialog-->
 </div>
 <!--end modal-->                      
-<?php }?>
+<?php } } ?>
                     </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>Full Name</th>
-                        <th>Username</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                      </tr>
-                    </tfoot>
                   </table>
                   <div class="clearfix"></div>
                 </div>
@@ -221,9 +243,7 @@ include('../includes/dbcon.php');
       </div>
 
     <!-- Matter ends -->
-
-
-    </div>
+</div>
 
    <!-- Mainbar ends -->
    <div class="clearfix"></div>

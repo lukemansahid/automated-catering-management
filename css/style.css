@@ -49,6 +49,9 @@ p{
 	padding: 0px;
 	margin:0px;
 }
+p .errorMessage{
+	color: red;
+}
 
 a{
 	color: #026b9c;
@@ -163,9 +166,9 @@ i.ipad{
 
 /* Form */
 
-form{
-	margin: 0px;
-}
+/*form{*/
+/*	margin: 0px;*/
+/*}*/
 
 .input-group-width{
 	max-width:250px;

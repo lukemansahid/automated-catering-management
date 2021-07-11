@@ -9,8 +9,8 @@ endif;
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>Dashboard - <?php include('../includes/title.php');?></title>
-  <?php include('../includes/links.php');?>
+  <title>User Dashboard - </title>
+  <?php include('includes/links.php');?>
   
 </head>
 
@@ -28,7 +28,7 @@ endif;
       <a href="index.html" class="navbar-brand hidden-lg">Chimney</a>
     </div>
       
-      <?php include('../includes/topbar.php');?>
+      <?php include('includes/topbar.php');?>
     
 
     </div>
@@ -41,7 +41,7 @@ endif;
 <div class="content" style="margin-top:10px">
 
     <!-- Sidebar -->
-    <?php include('../includes/sidebar.php');?>
+    <?php include('includes/sidebar.php');?>
 
     <!-- Sidebar ends -->
 
@@ -75,7 +75,7 @@ endif;
         <div class="container">
           <div class="row">
 <?php
-include('../includes/dbcon.php');
+include('includes/dbcon.php');
     $today=date('Y-m-d');
     $query=mysqli_query($con,"select COUNT(*) as count from reservation where r_status='Approved' and r_date>='$today'")or die(mysqli_error($con));
       $row=mysqli_fetch_array($query);
@@ -220,7 +220,7 @@ include('../includes/dbcon.php');
 <!-- Content ends -->
 
 <!-- Footer starts -->
-<?php include('../includes/footer.php');?>  
+<?php include('footer.php');?>
 
 <!-- Footer ends -->
 
@@ -239,7 +239,7 @@ include('../includes/dbcon.php');
     }
     ?>
 <!-- JS -->
-<?php include('../includes/js.php');?>  
+<?php include('includes/js.php');?>
 <script type="text/javascript">
     $(document).ready(function() {
       var options = {

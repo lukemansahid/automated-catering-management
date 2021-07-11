@@ -1,12 +1,11 @@
 <?php include 'header.php';?>
 
-
 <body class = "admin_body" style = "background-color:#343434 !important; background:none;">
 
 <div class="lockscreen-wrapper">
   <div class="lockscreen-logo">
     
-    <a style = "color:white;" href="../index.php">Catering</a>
+    <a style = "color:white;" href="../signup.php">Catering</a>
   </div>
   <!-- User name -->
   <div class="lockscreen-name">Administrator</div>

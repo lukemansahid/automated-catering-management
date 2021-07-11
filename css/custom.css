@@ -48,6 +48,7 @@ h2.logo-text {
 }
 footer.footer-amp {
     padding: 0px;
+    position: absolute;
 }
 .last-row{
 	padding-bottom:20px;
@@ -166,4 +167,8 @@ h2.center {
 }
 .title-content {
 	
+}
+
+.errorMessage{
+    color: red;
 }

@@ -4,7 +4,7 @@
       <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-column">
 		<div class = "padd">
             <!-- Copyright info -->
-				<p class="copy center">Copyright &copy; 2021 | <a href="https://www.campcodes.com/">CampCodes</a> </p>
+				<p class="copy center">Copyright &copy; 2021 | <a href="#">Christel Cole</a> </p>
 		</div>
       </div>
     </div>

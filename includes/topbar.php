@@ -11,10 +11,7 @@
 		<!-- Navigation starts -->
       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">  
 	  <ul class="nav navbar-nav">  
-          <!-- Upload to server link. Class "dropdown-big" creates big dropdown 
-      
 
-          <!-- Upload to server link. Class "dropdown-big" creates big dropdown -->
           <li class="dropdown dropdown-big">
             <a href="#"><span class = "label label-info"><i class="fa fa-calendar"></i></span> <?php echo date("F d, Y");?></a>            
           </li>

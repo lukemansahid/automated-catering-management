@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:index.php');
+header('Location:signup.php');
 endif;
 ?>
 
@@ -42,7 +42,7 @@ endif;
 
 	session_destroy();
 	
- echo '<meta http-equiv="refresh" content="2;url=index.php">';
+ echo '<meta http-equiv="refresh" content="2;url=signup.php">';
  
  echo'<span class="itext">Finishing Reservation. Redirecting to home page. Please wait!...</span>';
 ?>

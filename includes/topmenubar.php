@@ -10,24 +10,27 @@
 		</div>
 		<!-- Navigation starts -->
       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">  
-	    <ul class="nav navbar-nav">
+	  <ul class="nav navbar-nav">  
 
           <li class="dropdown dropdown-big">
-            <a href="#"><span class = "label label-info"><i class="fa fa-facebook"></i></span> Like us on Facebook</a>            
+            <a href="#"><span class = "label label-info"><i class="fa fa-calendar"></i></span> <?php echo date("F d, Y");?></a>            
           </li>
-
-          <li class="dropdown dropdown-big">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-primary"><i class="fa fa-twitter"></i></span> Follow is on Twitter</a>
-          </li>
-
-            <li class="dropdown pull-right">
-            <a href="#login" data-toggle="modal"> <i class="fa fa-user"></i> Log in</a>
-           </li>
+          <!-- Sync to server link -->
 
         </ul>
 
+        <!-- Search form -->
+       
+        <!-- Links -->
+       <ul class="nav navbar-nav pull-right">
+       <li class="pull-right">
+           <a href="#logoin" class="btn btn-info" data-toggle="modal"><i class="fa fa-sign-in"></i> Login</a>
+          </li>
+          
+        </ul>
       </nav> 
 
     </div>
 	</div>
-	
+
+
