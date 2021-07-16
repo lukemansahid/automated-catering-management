@@ -26,7 +26,11 @@
        <ul class="nav navbar-nav pull-right">
        <li class="dropdown pull-right">            
            <a href="#login" data-toggle="dropdown">
-              <i class="fa fa-user"></i> Admin
+              <i class="fa fa-user"></i> <?php
+               if(!empty($_SESSION['id'])){
+                   echo $_SESSION['username'];
+               }
+               ?>
             </a>		        
             <!-- Dropdown menu -->
            <ul class="dropdown-menu">            

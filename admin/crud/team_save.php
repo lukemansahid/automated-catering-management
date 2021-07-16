@@ -1,6 +1,6 @@
 <?php 
 
-include('../includes/dbcon.php');
+include('../../includes/dbcon.php');
 	
 	$team = $_POST['team'];
 	
@@ -12,12 +12,12 @@ include('../includes/dbcon.php');
 			mysqli_query($con,"INSERT INTO team(team_name) 
 				VALUES('$team')")or die(mysqli_error());  
 				echo "<script type='text/javascript'>alert('Successfully added new team!');</script>";
-				echo "<script>document.location='teams.php'</script>";   
+				echo "<script>document.location='../teams.php'</script>";
 		}	
 		else
 		{
 				echo "<script type='text/javascript'>alert('Team already added!');</script>";
-				echo "<script>document.location='teams.php'</script>";   
+				echo "<script>document.location='../teams.php'</script>";
 		}
 	
 ?>

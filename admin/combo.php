@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:signup.php');
+header('Location: ../mylogin.php');
 endif;
 ?>
 <!DOCTYPE html>
@@ -9,9 +9,8 @@ endif;
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>Combo Meals - <?php include('../includes/title.php');?></title>
+  <title>Combo Meals - </title>
   <?php include('../includes/links.php');?>
-  
 </head>
 
 <body>
@@ -24,17 +23,12 @@ endif;
       <button class="navbar-toggle btn-navbar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span>Menu</span>
       </button>
-      <!-- Site name for smallar screens -->
-      <a href="index.html" class="navbar-brand hidden-lg">Chimney</a>
     </div>
-      
+
       <?php include('../includes/topbar.php');?>
-    
 
     </div>
   </div>
-
-
 
 <!-- Main content starts -->
 
@@ -56,7 +50,7 @@ endif;
 
         <!-- Breadcrumb -->
         <div class="bread-crumb pull-right">
-          <a href="index.html"><i class="fa fa-home"></i> Home</a> 
+          <a href="dashboard.php"><i class="fa fa-home"></i> Home</a>
           <!-- Divider -->
           <span class="divider">/</span> 
           <a href="#" class="bread-current">Maintenance</a>
@@ -68,8 +62,6 @@ endif;
 
       </div>
       <!-- Page heading ends -->
-
-
 
        <!-- Matter -->
 
@@ -104,11 +96,8 @@ include('../includes/dbcon.php');
                       Are you sure you want to delete <?php echo $name;?>?
                     </div>                     
                   <!-- Buttons -->
-                  
-                      
                         <button type="submit" class="btn btn-sm btn-primary" name="del">Delete</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
-                      
                  
               </form>
               <!--end form-->
@@ -128,7 +117,7 @@ include('../includes/dbcon.php');
             </div>
             <div class="modal-body" style="height:300px">
               <!--start form-->
-              <form class="form-horizontal" method="post" action="combo_update.php" enctype='multipart/form-data'>
+              <form class="form-horizontal" method="post" action="crud/combo_update.php" enctype='multipart/form-data'>
                   <!-- Title -->
                   <input type="hidden" name="id" value="<?php echo $id;?>">
                   <!-- Title -->
@@ -162,7 +151,6 @@ include('../includes/dbcon.php');
                          <?php
                               $result = mysqli_query($con,"SELECT * FROM menu"); 
                                   while ($row = mysqli_fetch_assoc($result)){
-
                                 ?>
                                 <option value="<?php echo $row['menu_id'];?>"><?php echo $row['menu_name'];?></option>
                         <?php } ?>
@@ -259,7 +247,7 @@ include('../includes/dbcon.php');
             </div>
             <div class="modal-body">
               <!--start form-->
-              <form class="form-horizontal" method="post" action="combo_save.php">
+              <form class="form-horizontal" method="post" action="crud/combo_save.php">
                   <!-- Title -->
                   <div class="form-group">
                       <label class="control-label col-lg-3" for="title">Combo Name</label>

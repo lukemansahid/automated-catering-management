@@ -1,6 +1,6 @@
 
 <!--start form-->
-<form class="form-horizontal" method="post" action="admin/user_save.php">
+<form class="form-horizontal" method="post" action="admin/crud/user_save.php">
 
     <!-- Title -->
     <div class="form-group">

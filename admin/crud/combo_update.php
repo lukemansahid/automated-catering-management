@@ -1,5 +1,5 @@
 <?php
-include('../includes/dbcon.php');
+include('../../includes/dbcon.php');
 
  if (isset($_POST['update']))
  { 
@@ -23,7 +23,7 @@ include('../includes/dbcon.php');
 	}	 	
 
 		echo "<script type='text/javascript'>alert('Successfully updated combo meal details!');</script>";
-		echo "<script>document.location='combo.php'</script>";
+		echo "<script>document.location='../combo.php'</script>";
 	
 } 
 

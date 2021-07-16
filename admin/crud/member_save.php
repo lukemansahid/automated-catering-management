@@ -1,6 +1,6 @@
 <?php 
 
-include('../includes/dbcon.php');
+include('../../includes/dbcon.php');
 	
 	$last = $_POST['last'];
 	$first = $_POST['first'];
@@ -15,7 +15,7 @@ include('../includes/dbcon.php');
 			mysqli_query($con,"INSERT INTO member(member_last,member_first,member_contact,member_address,member_status) 
 			VALUES('$last','$first','$contact','$address','active')")or die(mysqli_error());  
 			echo "<script type='text/javascript'>alert('Successfully added new member!');</script>";
-			echo "<script>document.location='members.php'</script>";   
+			echo "<script>document.location='../members.php'</script>";
 		}
 		else
 		{

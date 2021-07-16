@@ -1,6 +1,6 @@
 <?php 
 
-include('../includes/dbcon.php');
+include('../../includes/dbcon.php');
 	
 	$team = $_POST['team'];
 	$members = $_POST['members'];
@@ -12,5 +12,5 @@ include('../includes/dbcon.php');
 	
 	}
 			echo "<script type='text/javascript'>alert('Successfully added new team!');</script>";
-			echo "<script>document.location='team_members.php'</script>";   
+			echo "<script>document.location='../team_members.php'</script>";
 ?>

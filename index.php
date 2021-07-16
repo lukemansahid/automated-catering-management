@@ -59,7 +59,7 @@
             </div>
             <div class="modal-body">
                 <!--start form-->
-                <form class="form-horizontal" method="post" action="admin/user_save.php">
+                <form class="form-horizontal" method="post" action="admin/crud/user_save.php">
                     <!-- Title -->
                     <div class="form-group">
                         <label class="control-label col-lg-2" for="firstname">First Name*</label>

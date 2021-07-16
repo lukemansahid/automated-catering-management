@@ -1,6 +1,6 @@
 <?php 
 
-include('../includes/dbcon.php');
+include('../../includes/dbcon.php');
 	
 	$what = $_POST['what'];
 	$where = $_POST['where'];
@@ -11,7 +11,7 @@ include('../includes/dbcon.php');
 		mysqli_query($con,"INSERT INTO event(event_what,event_where,event_date,event_time) 
 			VALUES('$what','$where','$date','$time')")or die(mysqli_error());  
 			echo "<script type='text/javascript'>alert('Successfully added new event!');</script>";
-			echo "<script>document.location='event.php'</script>";   
+			echo "<script>document.location='../event.php'</script>";
 	
 	
 ?>

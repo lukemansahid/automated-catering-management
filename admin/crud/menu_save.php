@@ -1,6 +1,6 @@
 <?php 
 
-include('../includes/dbcon.php');
+include('../../includes/dbcon.php');
 	
 	$menu = $_POST['menu'];
 	$cat = $_POST['cat'];
@@ -37,18 +37,18 @@ include('../includes/dbcon.php');
 						}
 				else
 				      {
-					move_uploaded_file($temp, "../images/".$name);
+					move_uploaded_file($temp, "../../images/".$name);
 				      }
 					}
 			}	
 				mysqli_query($con,"INSERT INTO menu(menu_name,cat_id,subcat_name,menu_desc,menu_price,menu_pic) 
 					VALUES('$menu','$cat','$subcat','$desc','$price','$name')")or die(mysqli_error());  
 					echo "<script type='text/javascript'>alert('Successfully added new menu!');</script>";
-					echo "<script>document.location='menu.php'</script>";   
+					echo "<script>document.location='../menu.php'</script>";
 		}
 		else
 		{
 					echo "<script type='text/javascript'>alert('Menu already added!');</script>";
-					echo "<script>document.location='menu.php'</script>";  
+					echo "<script>document.location='../menu.php'</script>";
 		}	
 ?>

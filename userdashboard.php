@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:../mylogin.php');
+header('Location:mylogin.php');
 endif;
 ?>
 <!DOCTYPE html>
@@ -24,8 +24,6 @@ endif;
       <button class="navbar-toggle btn-navbar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span>Menu</span>
       </button>
-      <!-- Site name for smallar screens -->
-      <a href="index.html" class="navbar-brand hidden-lg">Chimney</a>
     </div>
       
       <?php include('includes/topbar.php');?>
@@ -41,7 +39,7 @@ endif;
 <div class="content" style="margin-top:10px">
 
     <!-- Sidebar -->
-    <?php include('includes/sidebar.php');?>
+    <?php include('usersidebar.php');?>
 
     <!-- Sidebar ends -->
 
@@ -54,20 +52,18 @@ endif;
 
         <!-- Breadcrumb -->
         <div class="bread-crumb pull-right">
-          <a href="index.html"><i class="fa fa-home"></i> Home</a> 
+          <a href="userdashboard.php"><i class="fa fa-home"></i> Home</a>
           <!-- Divider -->
           <span class="divider">/</span> 
-          <a href="#" class="bread-current">Reservations</a>
-          <span class="divider">/</span> 
-          <a href="#" class="bread-current">View Details</a>
+<!--          <a href="#" class="bread-current">Reservations</a>-->
+<!--          <span class="divider">/</span> -->
+<!--          <a href="#" class="bread-current">View Details</a>-->
         </div>
 
         <div class="clearfix"></div>
 
       </div>
       <!-- Page heading ends -->
-
-
 
        <!-- Matter -->
 
@@ -112,99 +108,7 @@ include('includes/dbcon.php');
 
                     
           </div>  <!--row-->
-          <div class="row">
-            <div class="col-md-5">
-              <!-- Widget -->
-              <div class="widget">
-                <!-- Widget head -->
-                <div class="widget-head">
-                  <div class="pull-left">Monthly Sales Report</div>
-                  <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a> 
-                    <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                  </div>  
-                  <div class="clearfix"></div>
-                </div>              
 
-                <!-- Widget content -->
-                <div class="widget-content">
-                  <div class="padd">
-
-                      <div id="graph"></div>
-                  </div><!--pad-->
-                </div><!--widget content-->  
-              </div><!--widget-->
-            </div><!--col 6-->
-            
-            <div class="col-md-5">
-              <!-- Widget -->
-              <div class="widget">
-                <!-- Widget head -->
-                <div class="widget-head">
-                  <div class="pull-left">Monthly Reservation Report</div>
-                  <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a> 
-                    <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                  </div>  
-                  <div class="clearfix"></div>
-                </div>              
-
-                <!-- Widget content -->
-                <div class="widget-content">
-                  <div class="padd">
-
-                      <div id="graph1"></div>
-                  </div><!--pad-->
-                </div><!--widget content-->  
-              </div><!--widget-->
-            </div><!--col 6-->
-
-            <div class="col-md-2">
-              <!-- Widget -->
-              <div class="widget">
-                <!-- Widget head -->
-                <div class="widget-head">
-                  <div class="pull-left">Reservation</div>
-                  <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a> 
-                    <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                  </div>  
-                  <div class="clearfix"></div>
-                </div>              
-
-                <!-- Widget content -->
-                <div class="widget-content">
-                  <div class="padd">
-                    <ul class="recent">
-<?php
-    $query=mysqli_query($con,"select * from reservation where r_status='Approved' and r_date>='$today' order by r_date")or die(mysqli_error($con));
-      while($row=mysqli_fetch_array($query)){
-        $name=$row['r_last'].", ".$row['r_first'];
-        $date=$row['r_date'];
-?> 
-
-                      <li>
-
-                        <div class="recent-content">
-                          <div class="recent-meta"><?php echo date("M d, Y",strtotime($date));?></div>
-                          <div><?php echo $name;?>
-                          </div>
-
-                          <div class="clearfix"></div>
-                        </div>
-                      </li>
-
-<?php }?>                                    
-
-
-                    </ul>
-                      
-                  </div><!--pad-->
-                </div><!--widget content-->  
-              </div><!--widget-->
-            </div><!--col 6-->
-
-          </div>
         </div>
       </div>
 

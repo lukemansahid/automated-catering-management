@@ -1,6 +1,6 @@
 <?php 
 
-include('../includes/dbcon.php');
+include('../../includes/dbcon.php');
 	
 	$name = $_POST['name'];
 	$price = $_POST['price'];
@@ -18,5 +18,5 @@ include('../includes/dbcon.php');
 		}
 	}
 			echo "<script type='text/javascript'>alert('Successfully added new combo meal!');</script>";
-			echo "<script>document.location='combo.php'</script>";   
+			echo "<script>document.location='../combo.php'</script>";
 ?>

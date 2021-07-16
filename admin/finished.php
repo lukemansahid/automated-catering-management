@@ -260,7 +260,7 @@ include('../includes/dbcon.php');
             </div>
             <div class="modal-body">
               <!--start form-->
-              <form class="form-horizontal" method="post" action="menu_save.php" enctype='multipart/form-data'>
+              <form class="form-horizontal" method="post" action="crud/menu_save.php" enctype='multipart/form-data'>
                   <!-- Title -->
                   <div class="form-group">
                       <label class="control-label col-lg-2" for="title">Menu Name</label>

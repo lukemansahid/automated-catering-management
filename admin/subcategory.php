@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:signup.php');
+header('Location:../mylogin.php');
 endif;
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ endif;
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>Subcategory - <?php include('../includes/title.php');?></title>
+  <title>Subcategory -</title>
   <?php include('../includes/links.php');?>
   
 </head>
@@ -24,12 +24,9 @@ endif;
       <button class="navbar-toggle btn-navbar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span>Menu</span>
       </button>
-      <!-- Site name for smallar screens -->
-      <a href="index.html" class="navbar-brand hidden-lg">Chimney</a>
     </div>
       
       <?php include('../includes/topbar.php');?>
-    
 
     </div>
   </div>
@@ -54,7 +51,7 @@ endif;
 
         <!-- Breadcrumb -->
         <div class="bread-crumb pull-right">
-          <a href="index.html"><i class="fa fa-home"></i> Home</a> 
+          <a href="dashboard.php"><i class="fa fa-home"></i> Home</a>
           <!-- Divider -->
           <span class="divider">/</span> 
           <a href="#" class="bread-current">Maintenance</a>
@@ -66,8 +63,6 @@ endif;
 
       </div>
       <!-- Page heading ends -->
-
-
 
        <!-- Matter -->
 
@@ -134,7 +129,7 @@ include('../includes/dbcon.php');
             </div>
             <div class="modal-body" style="height:100px">
               <!--start form-->
-              <form class="form-horizontal" method="post" action="subcategory_update.php">
+              <form class="form-horizontal" method="post" action="crud/subcategory_update.php">
                   <!-- Title -->
                   <div class="form-group">
                       <label class="control-label col-lg-2" for="title">Subcategory Name</label>
@@ -180,7 +175,6 @@ include('../includes/dbcon.php');
                   <!-- Buttons -->
                   <div class="form-group">
                       <!-- Buttons -->
-                      
                         <button type="submit" class="btn btn-sm btn-primary" name="del">Delete</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
                       
@@ -195,23 +189,15 @@ include('../includes/dbcon.php');
 <!--end modal-->                     
 <?php }?>
                     </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>Subcategory Name</th>
-                        <th>Action</th>
-                      </tr>
-                    </tfoot>
+
                   </table>
                   <div class="clearfix"></div>
                 </div>
                 </div>
               </div>
 
-          
-                  </div>
-                  <div class="widget-foot">
-                    <!-- Footer goes here -->
-                  </div>
+                </div>
+
                 </div>
               </div>  
               
@@ -221,8 +207,6 @@ include('../includes/dbcon.php');
       </div>
 
     <!-- Matter ends -->
-
-
     </div>
 
    <!-- Mainbar ends -->
@@ -249,7 +233,7 @@ include('../includes/dbcon.php');
             </div>
             <div class="modal-body">
               <!--start form-->
-              <form class="form-horizontal" method="post" action="subcategory_save.php">
+              <form class="form-horizontal" method="post" action="crud/subcategory_save.php">
                   <!-- Title -->
                   <div class="form-group">
                       <label class="control-label col-lg-2" for="title">Subcategory Name</label>

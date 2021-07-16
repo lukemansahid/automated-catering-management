@@ -1,5 +1,5 @@
 <?php
-include('../includes/dbcon.php');
+include('../../includes/dbcon.php');
 
  if (isset($_POST['update']))
  { 
@@ -16,7 +16,7 @@ include('../includes/dbcon.php');
 	 or die(mysqli_error($con)); 
 
 		echo "<script type='text/javascript'>alert('Successfully updated user details!');</script>";
-		echo "<script>document.location='user.php'</script>";
+		echo "<script>document.location='../user.php'</script>";
 	
 } 
 

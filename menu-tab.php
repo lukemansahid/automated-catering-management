@@ -6,7 +6,7 @@
         <div class="col-md-4">
           <!-- Logo. -->
           <div class="logo">
-           <a href="signup.php"> <h2 class = "logo-text"><span class="bold">Automated Catering Management System</span></h2></a>
+           <a href="userdashboard.php"> <h2 class = "logo-text"><span class="bold">Automated Catering Management System</span></h2></a>
            
           </div>
           <!-- Logo ends -->
@@ -17,7 +17,7 @@
           <ul class="nav nav-tabs">
 
 			<li class="dropdown dropdown-big">
-              <a  href="signup.php"><i class="fa fa-home"></i> Home</a>
+              <a  href="userdashboard.php.php"><i class="fa fa-home"></i> Home</a>
             </li>
 			
 			

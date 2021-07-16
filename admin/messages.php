@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:signup.php');
+header('Location:../mylogin.php');
 endif;
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ endif;
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>Messages - <?php include('../includes/title.php');?></title>
+  <title>Messages -</title>
   <?php include('../includes/links.php');?>
   
 </head>
@@ -24,8 +24,6 @@ endif;
       <button class="navbar-toggle btn-navbar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span>Menu</span>
       </button>
-      <!-- Site name for smallar screens -->
-      <a href="index.html" class="navbar-brand hidden-lg">Chimney</a>
     </div>
       
       <?php include('../includes/topbar.php');?>
@@ -54,10 +52,10 @@ endif;
 
         <!-- Breadcrumb -->
         <div class="bread-crumb pull-right">
-          <a href="index.html"><i class="fa fa-home"></i> Home</a> 
+          <a href="dashboard.php"><i class="fa fa-home"></i> Home</a>
           <!-- Divider -->
           <span class="divider">/</span> 
-          <a href="#" class="bread-current">Dashboard</a>
+          <a href="dashboard.php" class="bread-current">Dashboard</a>
         </div>
 
         <div class="clearfix"></div>

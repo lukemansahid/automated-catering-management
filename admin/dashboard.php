@@ -9,7 +9,7 @@ endif;
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>Dashboard - <?php include('../includes/title.php');?></title>
+  <title>Dashboard -</title>
   <?php include('../includes/links.php');?>
   
 </head>
@@ -54,11 +54,11 @@ endif;
 
         <!-- Breadcrumb -->
         <div class="bread-crumb pull-right">
-          <a href="index.html"><i class="fa fa-home"></i> Home</a> 
+          <a href="dashboard.php"><i class="fa fa-home"></i> Home</a>
           <!-- Divider -->
           <span class="divider">/</span> 
-          <a href="#" class="bread-current">Reservations</a>
-          <span class="divider">/</span> 
+<!--          <a href="#" class="bread-current">Reservations</a>-->
+<!--          <span class="divider">/</span> -->
           <a href="#" class="bread-current">View Details</a>
         </div>
 
@@ -135,74 +135,6 @@ include('../includes/dbcon.php');
                 </div><!--widget content-->  
               </div><!--widget-->
             </div><!--col 6-->
-            
-            <div class="col-md-5">
-              <!-- Widget -->
-              <div class="widget">
-                <!-- Widget head -->
-                <div class="widget-head">
-                  <div class="pull-left">Monthly Reservation Report</div>
-                  <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a> 
-                    <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                  </div>  
-                  <div class="clearfix"></div>
-                </div>              
-
-                <!-- Widget content -->
-                <div class="widget-content">
-                  <div class="padd">
-
-                      <div id="graph1"></div>
-                  </div><!--pad-->
-                </div><!--widget content-->  
-              </div><!--widget-->
-            </div><!--col 6-->
-
-            <div class="col-md-2">
-              <!-- Widget -->
-              <div class="widget">
-                <!-- Widget head -->
-                <div class="widget-head">
-                  <div class="pull-left">Reservation</div>
-                  <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a> 
-                    <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                  </div>  
-                  <div class="clearfix"></div>
-                </div>              
-
-                <!-- Widget content -->
-                <div class="widget-content">
-                  <div class="padd">
-                    <ul class="recent">
-<?php
-    $query=mysqli_query($con,"select * from reservation where r_status='Approved' and r_date>='$today' order by r_date")or die(mysqli_error($con));
-      while($row=mysqli_fetch_array($query)){
-        $name=$row['r_last'].", ".$row['r_first'];
-        $date=$row['r_date'];
-?> 
-
-                      <li>
-
-                        <div class="recent-content">
-                          <div class="recent-meta"><?php echo date("M d, Y",strtotime($date));?></div>
-                          <div><?php echo $name;?>
-                          </div>
-
-                          <div class="clearfix"></div>
-                        </div>
-                      </li>
-
-<?php }?>                                    
-
-
-                    </ul>
-                      
-                  </div><!--pad-->
-                </div><!--widget content-->  
-              </div><!--widget-->
-            </div><!--col 6-->
 
           </div>
         </div>
@@ -227,17 +159,6 @@ include('../includes/dbcon.php');
 <!-- Scroll to top -->
 <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
 
-<?php
-    if (isset($_POST['del']))
-    {
-    $id=$_POST['id'];
-
-  // sending query
-  mysqli_query($con,"delete from reservation WHERE rid='$id'")
-  or die(mysqli_error());
-  echo "<script>document.location='pending.php'</script>";
-    }
-    ?>
 <!-- JS -->
 <?php include('../includes/js.php');?>  
 <script type="text/javascript">

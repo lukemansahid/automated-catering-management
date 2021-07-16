@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:signup.php');
+header('Location:../mylogin.php');
 endif;
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ endif;
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>Members - <?php include('../includes/title.php');?></title>
+  <title>Members -</title>
   <?php include('../includes/links.php');?>
   
 </head>
@@ -24,17 +24,12 @@ endif;
       <button class="navbar-toggle btn-navbar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span>Menu</span>
       </button>
-      <!-- Site name for smallar screens -->
-      <a href="index.html" class="navbar-brand hidden-lg">Chimney</a>
     </div>
       
       <?php include('../includes/topbar.php');?>
-    
 
     </div>
   </div>
-
-
 
 <!-- Main content starts -->
 
@@ -42,7 +37,6 @@ endif;
 
     <!-- Sidebar -->
     <?php include('../includes/sidebar.php');?>
-
     <!-- Sidebar ends -->
 
         <!-- Main bar -->
@@ -56,7 +50,7 @@ endif;
 
         <!-- Breadcrumb -->
         <div class="bread-crumb pull-right">
-          <a href="index.html"><i class="fa fa-home"></i> Home</a> 
+          <a href="dashboard.php"><i class="fa fa-home"></i> Home</a>
           <!-- Divider -->
           <span class="divider">/</span> 
           <a href="#" class="bread-current">Maintenance</a>
@@ -68,8 +62,6 @@ endif;
 
       </div>
       <!-- Page heading ends -->
-
-
 
        <!-- Matter -->
 
@@ -105,12 +97,8 @@ include('../includes/dbcon.php');
                       Are you sure you want to delete <?php echo $team;?>?
                     </div>                     
                   <!-- Buttons -->
-                  
-                      
                         <button type="submit" class="btn btn-sm btn-primary" name="del">Delete</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
-                      
-                 
               </form>
               <!--end form-->
             </div>
@@ -129,7 +117,7 @@ include('../includes/dbcon.php');
             </div>
             <div class="modal-body" style="height:200px">
               <!--start form-->
-              <form class="form-horizontal" method="post" action="team_member_update.php" enctype='multipart/form-data'>
+              <form class="form-horizontal" method="post" action="crud/team_member_update.php" enctype='multipart/form-data'>
                   <!-- Title -->
                   <input type="hidden" name="id" value="<?php echo $id;?>">
                   <!-- Title -->
@@ -158,7 +146,6 @@ include('../includes/dbcon.php');
                          <?php
                               $result = mysqli_query($con,"SELECT * FROM member where member_status='active' ORDER BY member_last"); 
                                   while ($row = mysqli_fetch_assoc($result)){
-
                                 ?>
                                 <option value="<?php echo $row['member_id'];?>"><?php echo $row['member_last']." ,".$row['member_first'];?></option>
                         <?php } ?>
@@ -207,28 +194,22 @@ include('../includes/dbcon.php');
                     <tr>
                       <td><?php echo $last." ,".$first;?></td>
                     </tr> 
-                   
-                
-<?php }?>                    
-                    
+
+<?php }?>
                   </tbody></table>
 
-                  <div class="widget-foot">
-                  </div>
                 </div>
               </div>
 
             </div>
               <!--end widget-->
-            <?php }?>  
+      <?php }?>
             </div>
           </div>
         </div>
       </div>
 
     <!-- Matter ends -->
-
-
     </div>
 
    <!-- Mainbar ends -->
@@ -255,7 +236,7 @@ include('../includes/dbcon.php');
             </div>
             <div class="modal-body">
               <!--start form-->
-              <form class="form-horizontal" method="post" action="team_member_save.php">
+              <form class="form-horizontal" method="post" action="crud/team_member_save.php">
                   <!-- Title -->
                   <div class="form-group">
                       <label class="control-label col-lg-2" for="title">Team Name</label>

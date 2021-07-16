@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:signup.php');
+header('Location:../mylogin.php');
 endif;
 ?>
 <!DOCTYPE html>
@@ -8,8 +8,6 @@ endif;
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <!-- Title and other stuffs -->
-  <title>Reservations - <?php include('../includes/title.php');?></title>
   <?php include('../includes/links.php');?>
   
 </head>
@@ -24,8 +22,6 @@ endif;
       <button class="navbar-toggle btn-navbar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span>Menu</span>
       </button>
-      <!-- Site name for smallar screens -->
-      <a href="index.html" class="navbar-brand hidden-lg">Chimney</a>
     </div>
       
       <?php include('../includes/topbar.php');?>
@@ -54,7 +50,7 @@ endif;
 
         <!-- Breadcrumb -->
         <div class="bread-crumb pull-right">
-          <a href="index.html"><i class="fa fa-home"></i> Home</a> 
+          <a href="dashboard.php"><i class="fa fa-home"></i> Home</a>
           <!-- Divider -->
           <span class="divider">/</span> 
           <a href="#" class="bread-current">Reservations</a>
@@ -103,17 +99,6 @@ endif;
 <!-- Scroll to top -->
 <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
 
-<?php
-    if (isset($_POST['del']))
-    {
-    $id=$_POST['id'];
-
-  // sending query
-  mysqli_query($con,"delete from reservation WHERE rid='$id'")
-  or die(mysqli_error());
-  echo "<script>document.location='pending.php'</script>";
-    }
-    ?>
 <!-- JS -->
 <?php include('../includes/js.php');?>  
 <script type="text/javascript">

@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:signup.php');
+header('Location:../mylogin.php');
 endif;
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ endif;
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>Menu Order - <?php include('../includes/title.php');?></title>
+  <title>Menu Order - </title>
   <?php include('../includes/links.php');?>
   
 </head>
@@ -24,12 +24,9 @@ endif;
       <button class="navbar-toggle btn-navbar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span>Menu Order</span>
       </button>
-      <!-- Site name for smallar screens -->
-      <a href="index.html" class="navbar-brand hidden-lg">Lee Pipez</a>
     </div>
       
       <?php include('../includes/topbar.php');?>
-    
 
     </div>
   </div>
@@ -50,13 +47,11 @@ endif;
       
       <!-- Page heading -->
       <div class="page-head">
-        <h2 class="pull-left"><i class="fa fa-home"></i> Dashboard
-         
-        </h2>
+        <h2 class="pull-left"><i class="fa fa-home"></i> Dashboard</h2>
 
         <!-- Breadcrumb -->
         <div class="bread-crumb pull-right">
-          <a href="index.html"><i class="fa fa-home"></i> Home</a> 
+          <a href="dashboard.php"><i class="fa fa-home"></i> Home</a>
           <!-- Divider -->
           <span class="divider">/</span> 
           <a href="#" class="bread-current">Menu Order</a>
@@ -88,7 +83,6 @@ include('../includes/dbcon.php');
         $rid=$row['rid'];
         $cid=$row['combo_id'];
 ?>  
- 
 
               <div class="col-md-4">
               <div class="widget">

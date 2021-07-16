@@ -1,7 +1,7 @@
 <?php 
 
 if (isset($_POST['submit'])){
-    include_once ('../includes/dbcon.php');
+    include_once('../../includes/dbcon.php');
 
     $firstname=$_POST['firstname'];
     $lastname=$_POST['lastname'];
@@ -24,7 +24,7 @@ if (isset($_POST['submit'])){
        $getUser = "SELECT username FROM users WHERE username = ?";
        $stmt = mysqli_stmt_init($con);
            if (!mysqli_stmt_prepare($stmt,$getUser)){
-               header("Location:../signup.php?signup=sqlerror");
+               header("Location:../../signup.php?signup=sqlerror");
                exit();
            }else{
                mysqli_stmt_bind_param($stmt,"s",$username);
@@ -32,19 +32,19 @@ if (isset($_POST['submit'])){
                mysqli_stmt_store_result($stmt);
                $rowCount = mysqli_stmt_num_rows($stmt);
                    if ($rowCount > 0){
-                       header("Location:../signup.php?signup=userExist&first=$firstname&last=$lastname");
+                       header("Location:../../signup.php?signup=userExist&first=$firstname&last=$lastname");
                        exit();
                    }else{
                        $sql = "INSERT INTO users(first_name,last_name,username,password,status,user_role) VALUES(?,?,?,?,?,?)";
                        $stmt = mysqli_stmt_init($con);
                        if (!mysqli_stmt_prepare($stmt,$sql)){
-                           header("Location:../signup.php?signup=sqlerror");
+                           header("Location:../../signup.php?signup=sqlerror");
                            exit();
                        }else{
                            $hasPwd = password_hash($password,PASSWORD_DEFAULT);
                            mysqli_stmt_bind_param($stmt,"ssssss",$firstname,$lastname,$username,$hasPwd,$status,$userRole);
                            mysqli_stmt_execute($stmt);
-                           header("Location:../signup.php?signup=success");
+                           header("Location:../../signup.php?signup=success");
                            exit();
                        }
                    }
@@ -60,7 +60,7 @@ if (isset($_POST['submit'])){
 //			if (!$userRole =='user'){
 //			echo "<script>document.location='user.php'</script>";
 //            }else{
-//                echo "<script>document.location='../index.php'</script>";
+//                echo "<script>document.location='../indexadmin.php'</script>";
 //            }
 	
 ?>

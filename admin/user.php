@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:signup.php');
+header('Location:../mylogin.php');
 endif;
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ endif;
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>Users - <?php include('../includes/title.php');?></title>
+  <title>Users - </title>
   <?php include('../includes/links.php');?>
   
 </head>
@@ -24,17 +24,12 @@ endif;
       <button class="navbar-toggle btn-navbar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span>Menu</span>
       </button>
-      <!-- Site name for smallar screens -->
-      <a href="index.html" class="navbar-brand hidden-lg">Chimney</a>
     </div>
       
       <?php include('../includes/topbar.php');?>
-    
 
     </div>
 </div>
-
-
 
 <!-- Main content starts -->
 
@@ -54,7 +49,7 @@ endif;
 
         <!-- Breadcrumb -->
         <div class="bread-crumb pull-right">
-          <a href="index.html"><i class="fa fa-home"></i> Home</a> 
+          <a href="dashboard.php"><i class="fa fa-home"></i> Home</a>
           <!-- Divider -->
           <span class="divider">/</span> 
           <a href="#" class="bread-current">Maintenance</a>
@@ -66,8 +61,6 @@ endif;
 
       </div>
       <!-- Page heading ends -->
-
-
 
        <!-- Matter -->
 
@@ -148,7 +141,7 @@ include('../includes/dbcon.php');
             </div>
             <div class="modal-body" style="height:200px">
               <!--start form-->
-              <form class="form-horizontal" method="post" action="user_update.php">
+              <form class="form-horizontal" method="post" action="crud/user_update.php">
                   <!-- Title -->
                   <div class="form-group">
                       <label class="control-label col-lg-2" for="firstname">First Name</label>
@@ -231,9 +224,7 @@ include('../includes/dbcon.php');
 
           
                   </div>
-                  <div class="widget-foot">
-                    <!-- Footer goes here -->
-                  </div>
+
                 </div>
               </div>  
               
@@ -252,12 +243,8 @@ include('../includes/dbcon.php');
 <!-- Content ends -->
 
 <!-- Footer starts -->
-<?php include('../includes/footer.php');?>  
-
+<?php include('../includes/footer.php');?>
 <!-- Footer ends -->
-
-<!-- Scroll to top -->
-<span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
 
 <!-- Modal -->
 <div id="addModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -269,7 +256,7 @@ include('../includes/dbcon.php');
             </div>
             <div class="modal-body">
               <!--start form-->
-              <form class="form-horizontal" method="post" action="user_save.php">
+              <form class="form-horizontal" method="post" action="crud/user_save.php">
                   <!-- Title -->
                   <div class="form-group">
                       <label class="control-label col-lg-2" for="title">Full Name</label>

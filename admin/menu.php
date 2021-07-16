@@ -1,6 +1,6 @@
 <?php session_start();
 if(empty($_SESSION['id'])):
-header('Location:signup.php');
+header('Location:../mylogin.php');
 endif;
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ endif;
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>Menu - <?php include('../includes/title.php');?></title>
+  <title>Menu - </title>
   <?php include('../includes/links.php');?>
   
 </head>
@@ -24,12 +24,10 @@ endif;
       <button class="navbar-toggle btn-navbar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span>Menu</span>
       </button>
-      <!-- Site name for smallar screens -->
-      <a href="index.html" class="navbar-brand hidden-lg">Chimney</a>
+
     </div>
       
       <?php include('../includes/topbar.php');?>
-    
 
     </div>
   </div>
@@ -54,7 +52,7 @@ endif;
 
         <!-- Breadcrumb -->
         <div class="bread-crumb pull-right">
-          <a href="index.html"><i class="fa fa-home"></i> Home</a> 
+          <a href="dashboard.php"><i class="fa fa-home"></i> Home</a>
           <!-- Divider -->
           <span class="divider">/</span> 
           <a href="#" class="bread-current">Maintenance</a>
@@ -66,9 +64,6 @@ endif;
 
       </div>
       <!-- Page heading ends -->
-
-
-
        <!-- Matter -->
 
       <div class="matter">
@@ -148,7 +143,7 @@ include('../includes/dbcon.php');
             </div>
             <div class="modal-body" style="height:300px">
               <!--start form-->
-              <form class="form-horizontal" method="post" action="menu_update.php" enctype='multipart/form-data'>
+              <form class="form-horizontal" method="post" action="crud/menu_update.php" enctype='multipart/form-data'>
                   <!-- Title -->
                   <input type="hidden" name="id" value="<?php echo $id;?>">
                   <!-- Title -->
@@ -263,27 +258,12 @@ include('../includes/dbcon.php');
 <!--end modal-->                     
 <?php }?>
                     </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>Image</th>
-                        <th>Menu Name</th>
-                        <th>Category</th>
-                        <th>Subcategory</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Action</th>
-                      </tr>
-                    </tfoot>
                   </table>
                   <div class="clearfix"></div>
                 </div>
                 </div>
               </div>
 
-          
-                  </div>
-                  <div class="widget-foot">
-                    <!-- Footer goes here -->
                   </div>
                 </div>
               </div>  
@@ -322,7 +302,7 @@ include('../includes/dbcon.php');
             </div>
             <div class="modal-body">
               <!--start form-->
-              <form class="form-horizontal" method="post" action="menu_save.php" enctype='multipart/form-data'>
+              <form class="form-horizontal" method="post" action="crud/menu_save.php" enctype='multipart/form-data'>
                   <!-- Title -->
                   <div class="form-group">
                       <label class="control-label col-lg-2" for="title">Menu Name</label>

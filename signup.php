@@ -11,7 +11,7 @@
 <div class="registration-form">
 
     <h1>Sign Up Form</h1>
-    <form method="post" action="admin/user_save.php">
+    <form method="post" action="admin/crud/user_save.php">
         <p>First Name:</p>
         <?php  if (isset($_GET['first'])){
             $first = $_GET['first'];

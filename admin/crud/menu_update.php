@@ -1,5 +1,5 @@
 <?php
-include('../includes/dbcon.php');
+include('../../includes/dbcon.php');
 
  if (isset($_POST['update']))
  { 
@@ -33,7 +33,7 @@ include('../includes/dbcon.php');
 					}
 				else
 					  {
-					move_uploaded_file($temp, "../images/".$name);
+					move_uploaded_file($temp, "../../images/".$name);
 					  }
 					}
 		}
@@ -41,7 +41,7 @@ include('../includes/dbcon.php');
 	 or die(mysqli_error($con)); 
 
 		echo "<script type='text/javascript'>alert('Successfully updated menu details!');</script>";
-		echo "<script>document.location='menu.php'</script>";
+		echo "<script>document.location='../menu.php'</script>";
 	
 } 
 
