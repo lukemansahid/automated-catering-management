@@ -73,7 +73,7 @@ endif;
               <div class="widget">
                 <div class="widget-head">
                   <div class="pull-left"> Users
-                    <a href="#addModal" class="btn btn-info" data-toggle="modal">Add New Member</a>
+                    <a href="#addModal" class="btn btn-info" data-toggle="modal">Add New Staff</a>
                   </div>
                   <div class="widget-icons pull-right">
                     <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a> 
@@ -194,16 +194,7 @@ include('../includes/dbcon.php');
 <!--end modal-->                      
 <?php }?>
                     </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>Last Name</th>
-                        <th>First Name</th>
-                        <th>Contact</th>
-                        <th>Address</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                      </tr>
-                    </tfoot>
+
                   </table>
                   <div class="clearfix"></div>
                 </div>
@@ -244,7 +235,7 @@ include('../includes/dbcon.php');
         <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h4 class="modal-title">Add New Member</h4>
+              <h4 class="modal-title">Add New Staff</h4>
             </div>
             <div class="modal-body">
               <!--start form-->

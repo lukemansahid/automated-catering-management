@@ -30,7 +30,7 @@
               <li><a href="category.php">Category</a></li>
               <li><a href="subcategory.php">Subcategory</a></li>
               <li><a href="event.php">Event</a></li>
-              <li><a href="members.php">Members</a></li>
+              <li><a href="members.php">Staff</a></li>
               <li><a href="teams.php">Teams</a></li>
               <li><a href="team_members.php">Team Members</a></li>
               <li><a href="user.php">User</a></li>
