@@ -12,13 +12,13 @@ if (isset($_POST['submit'])){
     $userRole = 'user';
 
     if (empty($firstname)|| empty($lastname)|| empty($password)|| empty($confirmPassword)|| empty($username)){
-        header("Location:../signup.php?signup=empty&first=$firstname&last=$lastname&username=$username");
+        header("Location:../../signup.php?signup=empty&first=$firstname&last=$lastname&username=$username");
         exit();
     }elseif (!preg_match("/^[a-zA-Z0-9]*/",$username) || !preg_match("/^[a-zA-Z]*/",$firstname) || !preg_match("/^[a-zA-Z]*/",$lastname)){
-        header("Location:../signup.php?signup=char");
+        header("Location:../../signup.php?signup=char");
         exit();
     }elseif ($password !== $confirmPassword){
-        header("Location:../signup.php?signup=pwdMatch&first=$firstname&last=$lastname&username=$username");
+        header("Location:../../signup.php?signup=pwdMatch&first=$firstname&last=$lastname&username=$username");
         exit();
     }else{
        $getUser = "SELECT username FROM users WHERE username = ?";
