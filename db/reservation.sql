@@ -53,8 +53,8 @@ CREATE TABLE IF NOT EXISTS `category` (
 
 INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
 (6, 'Main Course'),
-(7, 'Pasta'),
-(9, 'Dessert'),
+(7, 'Drinks'),
+(9, 'African Food'),
 (10, 'Rice');
 
 -- --------------------------------------------------------
