@@ -6,24 +6,24 @@
         </div>
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
             <div data-p="225.00">
-                <img data-u="image" src="img/red.jpg" />
+                <img data-u="image" src="myimg/cat1.jpg" />
                 <div style="position:absolute;top:30px;left:30px;width:480px;height:120px;z-index:0;font-size:50px;color:#ffffff;line-height:60px;"><img src = "img/cc.png"></div>
                 <div style="position:absolute;top:300px;left:30px;width:480px;height:120px;z-index:0;font-size:30px;color:#ffffff;line-height:38px;"></div>
                 <div data-u="caption" data-t="0" style="position:absolute;top:120px;left:650px;width:470px;height:220px;z-index:0;">
                     <img style="position:absolute;top:0px;left:0px;width:470px;height:220px;z-index:0;" src="img/c-phone-horizontal.png" />
                     <div style="position:absolute;top:4px;left:45px;width:379px;height:213px;z-index:0; overflow: hidden;">
-                        <img data-u="caption" data-t="1" style="position:absolute;top:0px;left:0px;width:379px;height:213px;z-index:0;" src="img/c-slide-1.jpg" />
-                        <img data-u="caption" data-t="2" style="position:absolute;top:0px;left:379px;width:379px;height:213px;z-index:0;" src="img/c-slide-3.jpg" />
+                        <img data-u="caption" data-t="1" style="position:absolute;top:0px;left:0px;width:379px;height:213px;z-index:0;" src="myimg/unimaklogo.jpg" />
+                        <img data-u="caption" data-t="2" style="position:absolute;top:0px;left:379px;width:379px;height:213px;z-index:0;" src="myimg/cat5.jpg" />
                     </div>
                     <img style="position:absolute;top:4px;left:45px;width:379px;height:213px;z-index:0;" src="img/c-navigator-horizontal.png" />
                     <img data-u="caption" data-t="3" style="position:absolute;top:740px;left:1600px;width:257px;height:300px;z-index:0;" src="img/c-finger-pointing.png" />
                 </div>
             </div>
             <div data-p="225.00" style="display: none;">
-                <img data-u="image" src="img/purple.jpg" />
+                <img data-u="image" src="myimg/cat1.jpg" />
             </div>
             <div data-p="225.00" data-po="80% 55%" style="display: none;">
-                <img data-u="image" src="img/blue.jpg" />
+                <img data-u="image" src="myimg/cat2.jpg" />
             </div>
             <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a>
         </div>

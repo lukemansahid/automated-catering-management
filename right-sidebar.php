@@ -17,7 +17,7 @@
                           <hr />
                           <p><i class="fa fa-envelope"></i>&nbsp; Email<strong>:</strong> christelcole001@gmail.com</p>
                           <hr />
-                          <p><i class="fa fa-home"></i>&nbsp; Address<strong>:</strong> Yoni </p>
+                          <p><i class="fa fa-home"></i>&nbsp; Address<strong>:</strong> Yoni Canteen </p>
                           <hr />
                           <p><i class="fa fa-facebook"></i>&nbsp; Facebook<strong>:</strong> Christel Cole </p>
                           <hr />

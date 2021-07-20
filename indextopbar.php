@@ -17,16 +17,20 @@
                 </li>
                 <!-- Sync to server link -->
 
+                <li class="dropdown dropdown-big">
+                    <a href="#"><span class = "label label-info"><i class="fa fa-cutlery"></i></span> UNIMAK- YONI CAMPUS CANTEEN</a>
+                </li>
+
             </ul>
 
             <!-- Links -->
             <ul class="nav navbar-nav pull-right">
                 <li class="pull-right">
-                    <a href="mylogin.php" class="btn btn-sm btn-info" ><i class="fa fa-sign-in"></i> Login</a>
+                    <a href="mylogin.php" class="btn btn-sm" ><i class="fa fa-sign-in"></i> Login</a>
                 </li>
 
                 <li>
-                    <a href="signup.php" class="btn btn-sm btn-info"><i class="fa fa-users"></i> Sign Up</a>
+                    <a href="signup.php" class="btn btn-sm"><i class="fa fa-users"></i> Sign Up</a>
                 </li>
 
             </ul>

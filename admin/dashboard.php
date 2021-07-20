@@ -1,5 +1,9 @@
 <?php session_start();
-if(empty($_SESSION['id'])):
+/*
+this line of code check if the user is not login
+if not login redirect to the login page
+*/
+if(empty($_SESSION['id']) || $_SESSION['userRole'] !='admin'):
 header('Location:../mylogin.php');
 endif;
 ?>
@@ -24,8 +28,6 @@ endif;
       <button class="navbar-toggle btn-navbar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span>Menu</span>
       </button>
-      <!-- Site name for smallar screens -->
-      <a href="index.html" class="navbar-brand hidden-lg">Chimney</a>
     </div>
       
       <?php include('../includes/topbar.php');?>
@@ -33,8 +35,6 @@ endif;
 
     </div>
   </div>
-
-
 
 <!-- Main content starts -->
 
@@ -120,11 +120,11 @@ include('../includes/dbcon.php');
                 <div class="widget-head">
                   <div class="pull-left">Monthly Sales Report</div>
                   <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a> 
+                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
                     <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                  </div>  
+                  </div>
                   <div class="clearfix"></div>
-                </div>              
+                </div>
 
                 <!-- Widget content -->
                 <div class="widget-content">
@@ -132,7 +132,7 @@ include('../includes/dbcon.php');
 
                       <div id="graph"></div>
                   </div><!--pad-->
-                </div><!--widget content-->  
+                </div><!--widget content-->
               </div><!--widget-->
             </div><!--col 6-->
 

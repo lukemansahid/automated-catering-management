@@ -9,7 +9,6 @@
 <script src="js/jquery.slimscroll.min.js"></script> <!-- jQuery Slim Scroll -->
 <script src="js/jquery.dataTables.min.js"></script> <!-- Data tables -->
 <script src="js/jquery.colorbox-min.js"></script> <!-- Data tables -->
-<script src="js/select2.full.min.js"></script> <!-- Data tables -->
 
 <!-- jQuery Flot -->
 <script src="js/excanvas.min.js"></script>

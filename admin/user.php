@@ -123,10 +123,13 @@ include('../includes/dbcon.php');
                         <td><span class="label label-<?php echo $flag;?>"><?php echo $status;?></span></td>
                           <td><?php echo $userRole ;?></td>
                         <td>
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                               <a href="#myModal" class="btn btn-info" data-target="#update<?php echo $id;?>" data-toggle="modal">
                                 <i class="fa fa-pencil"></i>
                               </a>
+                                <a href="#delete" class="btn btn-danger" data-target="#delete<?php echo $id;?>" data-toggle="modal">
+                                    <i class="fa fa-times"></i>
+                                </a>
                             </div>
                         </td>
                       </tr>
@@ -213,8 +216,41 @@ include('../includes/dbcon.php');
         </div><!--modal content-->
     </div><!--modal dialog-->
 </div>
-<!--end modal-->                      
-<?php } } ?>
+<!--end modal-->
+
+<!-- Modal -->
+          <div id="delete<?php echo $id;?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                          <h4 class="modal-title">Delete User</h4>
+                      </div>
+                      <div class="modal-body" style="height:140px">
+                          <!--start form-->
+                          <form class="form-horizontal" method="post">
+                              <input type="hidden" class="form-control" name="id" value="<?php echo $id;?>">
+                              <div class="alert alert-danger">
+                                  Are you sure you want to delete the User <?php echo $firstname ." ".$lastname;?>?
+                              </div>
+                              <!-- Buttons -->
+                              <div class="form-group">
+                                  <!-- Buttons -->
+                                  <button type="submit" class="btn btn-sm btn-primary" name="del">Delete</button>
+                                  <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+
+                              </div>
+                          </form>
+                          <!--end form-->
+                      </div>
+
+                  </div><!--modal content-->
+              </div><!--modal dialog-->
+          </div>
+          <!--end modal-->
+
+
+      <?php } } ?>
                     </tbody>
                   </table>
                   <div class="clearfix"></div>
@@ -294,7 +330,19 @@ include('../includes/dbcon.php');
         </div><!--modal content-->
     </div><!--modal dialog-->
 </div>
-<!--end modal-->  
+<!--end modal-->
+
+<?php
+if (isset($_POST['del']))
+{
+    $id=$_POST['id'];
+
+    // sending query
+    mysqli_query($con,"delete from users WHERE user_id='$id'")
+    or die(mysqli_error());
+    echo "<script>document.location='user.php'</script>";
+}
+?>
 <!-- JS -->
 <?php include('../includes/js.php');?>  
 

@@ -1,12 +1,13 @@
 <?php include 'header.php';?>
 
-<body>
+<body class="cl">
 
 <?php include 'indextopbar.php';?>
 
 <!--Content start-->
 
 <div class = "content">
+
     <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class = "col-md-9 col-lg-9 image-content">
             <div class = "widget">
@@ -16,14 +17,35 @@
             </div>
         </div>
         <?php include('right-sidebar.php');?>
-    </div>
 
+        <div class  = "content">
+            <div class = "col-lg-12 col-sm-12 col-md-12 col-xs-12 last-row">
+                <div class = "class = "col-lg-12">
+                <h1 class = "page-title center" style = "padding-top:50px;">Welcome to the Yoni Canteen</h1>
+            </div>
+
+            <div class = "col-sm-8 col-lg-6 col-md-6">
+                <h2 class = "welcome">The place where delicious foods are served </h2>
+                <p class = "body-text">The Catering Services offers great satisfaction and awesome experience not only in food but in all of their services that guarantee the customers needs.
+                    Through the great effort of their kitchen personnel and their catering crews they are successfully giving the services and a high quality value of foods that suites to all occasions and theme.
+                </p>
+                <br/>
+                <p class = "body-text">
+                    Wanting to give their clients service and a catering experience like no other, Yoni's Catering has always strived to provide something new to their patrons. This is evident in the constantly expanding menus and packages that they offer.
+                    “We attend seminars and trainings in order to see the newest trends that we can use here in the country,”Yoni Catering believes that we have to continuously learn new approaches in providing for the needs.
+                </p>
+            </div>
+        </div>
+
+      </div>
+
+    <div class="clearfix"></div>
 </div>
 
 <!--End Content-->
 
 <!-- Footer starts -->
-<?php //include('footer.php');?>
+<?php include('footer.php');?>
 
 <!-- Footer ends -->
 

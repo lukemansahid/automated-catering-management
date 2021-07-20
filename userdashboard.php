@@ -38,11 +38,6 @@ endif;
 
 <div class="content" style="margin-top:10px">
 
-    <!-- Sidebar -->
-    <?php include('usersidebar.php');?>
-
-    <!-- Sidebar ends -->
-
         <!-- Main bar -->
     <div class="mainbar">
       

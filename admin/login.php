@@ -72,5 +72,6 @@ $pass_unsafe=$_POST['password'];
 //				  /* $_SESSION['name']=$first." ".$last; */
 //			  	echo "<script type='text/javascript'>document.location='dashboard.php'</script>";
 //			  }
+
 }
 ?>
